@@ -4,7 +4,7 @@ import shutil
 import os
 import copy
 import sys
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger
 
 # Temporary folder
 temp = 'temp'
@@ -55,7 +55,7 @@ print(' ')
 
 # Merge pdf
 pdfs = [sub + '.pdf' for sub in listoflayers]
-merger = PdfFileMerger()
+merger = PdfMerger()
 for pdf in pdfs:
     merger.append(temp + '/' + pdf)
 merger.write("presentation.pdf")
