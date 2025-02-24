@@ -25,9 +25,9 @@ If you need help, find a bug, want to give me advice or feedback, please contact
 
 This repository is mirrored on both GitLab and GitHub. You can access it via the following links:
 
-- **GitLab**: [https://gitlab.com/maximelenormand/plant-spectral-diversity](https://gitlab.com/maximelenormand/plant-spectral-diversity)  
-- **GitHub**: [https://github.com/maximelenormand/Plant-spectral-diversity](https://github.com/maximelenormand/Plant-spectral-diversity)  
+- **GitLab**: [https://gitlab.com/maximelenormand/inkscape-presentation](https://gitlab.com/maximelenormand/inkscape-presentation)  
+- **GitHub**: [https://github.com/maximelenormand/inkscape-presentation](https://github.com/maximelenormand/inkscape-presentation)  
 
 The repository is archived in Software Heritage:
 
-[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/maximelenormand/Plant-spectral-diversity/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/maximelenormand/Plant-spectral-diversity)
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/maximelenormand/inkscape-presentation/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/maximelenormand/inkscape-presentation)
