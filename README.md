@@ -20,7 +20,7 @@ and output files.
 
 You can run the scripts using the command:
 
-**python3 inkpres.py** ***[--input 'path/to/svg_file'] [--output 'path/to/pdf_file']***
+**python3 inkpres.py [--input 'path/to/svg_file'] [--output 'path/to/pdf_file']**
 
 If you need help, find a bug, want to give me advice or feedback, please contact me!
 
