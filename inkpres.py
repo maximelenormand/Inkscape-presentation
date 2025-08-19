@@ -4,7 +4,21 @@ import shutil
 import os
 import copy
 import sys
+import argparse
 from PyPDF2 import PdfMerger
+
+# Argument
+parser = argparse.ArgumentParser()
+parser.add_argument("--input", type=str, help="Path input")
+parser.add_argument("--output", type=str, help="Path output")
+args = parser.parse_args()
+
+input = 'presentation.svg'
+if args.input:
+    input = args.input
+output = 'presentation.pdf'
+if args.output:
+    output = args.output
 
 # Temporary folder
 temp = 'temp'
@@ -13,7 +27,7 @@ if os.path.exists(temp):
 os.makedirs(temp)
 
 # Convert layer to svg (based on https://github.com/james-bird/layer-to-svg)
-tree = ET.parse('presentation.svg')
+tree = ET.parse(input)
 root = tree.getroot()
 listoflayers=[]
 for g in root.findall('{http://www.w3.org/2000/svg}g'):
@@ -58,7 +72,7 @@ pdfs = [sub + '.pdf' for sub in listoflayers]
 merger = PdfMerger()
 for pdf in pdfs:
     merger.append(temp + '/' + pdf)
-merger.write("presentation.pdf")
+merger.write(output)
 merger.close()
 print('pdfs successfully merged')
 

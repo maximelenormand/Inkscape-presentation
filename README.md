@@ -7,17 +7,20 @@ layer(s) contained in an Inkscape SVG file.
 
 ## Execution
 
-The script should be executed from a folder containing the Inkscape SVG file 
-named ***presentation.svg***. The script will first convert the layers into 
-SVG files (stored in a temporary folder ***temp*** that will be removed at the 
-end of the process). This firt step is based 
+The script can be executed from a folder containing the Inkscape SVG file 
+(named ***presentation.svg*** by default). The script will first convert the 
+layers into SVG files (stored in a temporary folder ***temp*** that will be 
+removed at the end of the process). This firt step is based 
 on https://github.com/james-bird/layer-to-svg. The script will then convert the 
 individual SVG files into PDF files. The PDF files will be eventually merged in 
-a file ***presentation.pdf***.
+a file (named ***presentation.pdf*** by default).
+
+Two optional arguments can be used to specify the paths and names of the input 
+and output files.
 
 You can run the scripts using the command:
 
-**python3 inkpres.py**
+**python3 inkpres.py** [--input "path/to/svg_file"] [--output "path/to/pdf_file"]
 
 If you need help, find a bug, want to give me advice or feedback, please contact me!
 
