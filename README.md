@@ -1,4 +1,4 @@
-# Generating PDF Presentation from Inkscape Layers
+# Generating PDF presentation from Inkscape layers
 
 ## Description
 
