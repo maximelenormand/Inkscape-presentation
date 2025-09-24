@@ -1,28 +1,49 @@
-# Generating PDF presentation from Inkscape layers
+# Generating PDF Presentation from Inkscape Layers
 
 ## Description
 
-This repository provides a Python script that generates a PDF based on the 
-layer(s) contained in an Inkscape SVG file. 
+This repository provides a Python script that generates a PDF based on the  
+layer(s) contained in an Inkscape SVG file.
 
-## Execution
+The script works as follows:
 
-The script can be executed from a folder containing the Inkscape SVG file 
-(named ***presentation.svg*** by default). The script will first convert the 
-layers into SVG files (stored in a temporary folder ***temp*** that will be 
-removed at the end of the process). This firt step is based 
-on https://github.com/james-bird/layer-to-svg. The script will then convert the 
-individual SVG files into PDF files. The PDF files will be eventually merged in 
-a file (named ***presentation.pdf*** by default).
+1. It converts each layer of an Inkscape SVG into individual SVG files  
+   stored in a temporary folder (`temp`). This step is based on  
+   [https://github.com/james-bird/layer-to-svg](https://github.com/james-bird/layer-to-svg).  
+2. It converts each layer-SVG into a PDF using Inkscape.  
+3. It merges all PDFs into a single output file.
 
-Two optional arguments can be used to specify the paths and names of the input 
-and output files.
+By default, the script expects an input file named `presentation.svg` and  
+produces an output file named `presentation.pdf`. Both the input and output  
+can be customized with optional arguments.
 
-You can run the scripts using the command:
+The temporary folder (`temp`) is automatically removed at the end of the process.
+
+## Usage
+
+You can run the script using:
 
 **python3 inkpres.py [--input 'path_to/svg_file'] [--output 'path_to/pdf_file']**
 
-If you need help, find a bug, want to give me advice or feedback, please contact me!
+### Behavior
+
+- **No arguments provided:**  
+  Input defaults to `presentation.svg`, output defaults to `presentation.pdf`.
+
+- **Only `--input` provided:**  
+  Output will automatically be named after the input, replacing `.svg` with `.pdf`.
+
+- **Only `--output` provided:**  
+  Input defaults to `presentation.svg`. Output must have a `.pdf` extension.
+
+- **Both `--input` and `--output` provided:**  
+  Uses the specified input and output files. Output must have a `.pdf` extension.
+
+The script validates:
+
+- Existence of the input file.  
+- Correct input (`.svg`) and output (`.pdf`) extensions.  
+- Output folder creation if it does not exist.
 
 ## Repository mirrors
 
