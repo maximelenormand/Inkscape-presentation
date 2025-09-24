@@ -2,19 +2,19 @@
 
 ## Description
 
-This repository provides a Python script that generates a PDF based on the  
+This repository provides a Python script that generates a PDF based on the 
 layer(s) contained in an Inkscape SVG file.
 
 The script works as follows:
 
-1. It converts each layer of an Inkscape SVG into individual SVG files  
-   stored in a temporary folder (`temp`). This step is based on  
-   [https://github.com/james-bird/layer-to-svg](https://github.com/james-bird/layer-to-svg).  
+1. It converts each layer of an Inkscape SVG into individual SVG files stored in 
+a temporary folder (`temp`). This step is based on 
+[https://github.com/james-bird/layer-to-svg](https://github.com/james-bird/layer-to-svg).  
 2. It converts each layer-SVG into a PDF using Inkscape.  
 3. It merges all PDFs into a single output file.
 
-By default, the script expects an input file named `presentation.svg` and  
-produces an output file named `presentation.pdf`. Both the input and output  
+By default, the script expects an input file named `presentation.svg` and 
+produces an output file named `presentation.pdf`. Both the input and output 
 can be customized with optional arguments.
 
 The temporary folder (`temp`) is automatically removed at the end of the process.
